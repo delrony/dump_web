@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+    server:
+        image: php-dev
+        volumes:
+            - ../../.:/home/dumper/dump_web
+        ports:
+            - '8000:8000'
+
+    db:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: ronyhuda
+        volumes:
+            - mysql-data:/var/lib/mysql
+
+volumes:
+    mysql-data:

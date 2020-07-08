@@ -30,7 +30,7 @@ class Tag
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Content")
+     * @ORM\ManyToMany(targetEntity="Content", mappedBy="tag")
      */
     private $contents;
 }

@@ -30,7 +30,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Content")
+     * @ORM\ManyToMany(targetEntity="Content", mappedBy="category")
      */
     private $contents;
 }
